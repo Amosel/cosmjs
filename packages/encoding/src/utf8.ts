@@ -20,6 +20,7 @@ export function toUtf8(str: string): Uint8Array {
  * By default lossy mode is off and invalid data will lead to exceptions.
  */
 export function fromUtf8(data: Uint8Array, lossy = false): string {
-  const fatal = !lossy;
-  return new TextDecoder("utf-8", { fatal }).decode(data);
+  // const fatal = !lossy;
+  // { fatal }
+  return new TextDecoder("utf-8").decode(data);
 }
